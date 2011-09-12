@@ -1,6 +1,6 @@
 Name:           florence
 Version:        0.5.0
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Extensible scalable on-screen virtual keyboard
 
 Group:          System/X11
@@ -16,7 +16,7 @@ BuildRequires:    libglade2-devel
 BuildRequires:    at-spi-devel
 BuildRequires:    librsvg2-devel
 BuildRequires:    cairo-devel
-BuildRequires:    libgnome-devel
+BuildRequires:    libgnome2-devel
 BuildRequires:    libGConf2-devel
 BuildRequires:    desktop-file-utils
 BuildRequires:    scrollkeeper
