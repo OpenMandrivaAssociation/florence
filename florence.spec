@@ -26,7 +26,8 @@ BuildRequires:    libnotify-devel
 BuildRequires:    gnome-doc-utils
 BuildRequires:    libxtst-devel
 %if %mdvver >= 201100
-BuildRequires:    at-spi2-core-devel
+#Not yet. We want Florence to be in Main but at-spi2-core is in Contrib now
+#BuildRequires:    at-spi2-core-devel
 %endif
 
 %description
