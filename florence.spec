@@ -1,6 +1,6 @@
 Name:           florence
-Version:        0.5.0
-Release:        %mkrel 2
+Version:        0.5.1
+Release:        %mkrel 1
 Summary:        Extensible scalable on-screen virtual keyboard
 
 Group:          System/X11
@@ -25,6 +25,9 @@ BuildRequires:    libnotify-devel
 #BuildRequires:    libpanelappletmm-devel
 BuildRequires:    gnome-doc-utils
 BuildRequires:    libxtst-devel
+%if %mdvver >= 201100
+BuildRequires:    at-spi2-core-devel
+%endif
 
 %description
 Florence is an extensible scalable virtual keyboard. 
