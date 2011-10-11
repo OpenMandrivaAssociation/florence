@@ -8,6 +8,7 @@ License:        GPLv2+ and GFDL
 URL:            http://florence.sourceforge.net
 Source0:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.5.0-nullcallback.patch
+Patch1:		florence-0.5.1-dbus.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires:    gtk2-devel
@@ -52,15 +53,14 @@ reconfigure layouts in KDE4 settings once and it should work.
 %prep
 %setup -q
 %patch0 -p1 -b .nullcallbackfix
+%patch1 -p1 -b .dbus
 
 rm -f gconf-refresh
 ln -sf /bin/true gconf-refresh
 
 sed -i 's|Icon=%{name}.svg|Icon=%{name}|g' data/%{name}.desktop.in.in
 
-
 %build
-export CPPFLAGS="%{optflags} -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include"
 %configure \
       --without-panelapplet \
       --without-xrecord \
