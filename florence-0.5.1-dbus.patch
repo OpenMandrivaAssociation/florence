@@ -1,0 +1,17 @@
+diff -urN florence-0.5.1/src/key.c florence-0.5.1-patched/src/key.c
+--- florence-0.5.1/src/key.c	2011-08-21 01:23:52.000000000 +1100
++++ florence-0.5.1-patched/src/key.c	2011-10-11 11:33:03.741999877 +1100
+@@ -28,12 +28,12 @@
+ #include <gdk/gdkx.h>
+ #ifdef ENABLE_AT_SPI
+ #define AT_SPI
+-#include <dbus/dbus.h>
+ #include <cspi/spi.h>
+ #endif
+ #ifdef ENABLE_AT_SPI2
+ #define AT_SPI
+ #include <atspi/atspi.h>
++#include <dbus/dbus.h>
+ #endif
+ #ifdef ENABLE_XTST
+ #include <X11/extensions/XTest.h>
