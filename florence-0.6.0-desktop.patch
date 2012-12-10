@@ -1,0 +1,27 @@
+diff -urN florence-0.6.0/data/florence.desktop.in.in florence-0.6.0-patched/data/florence.desktop.in.in
+--- florence-0.6.0/data/florence.desktop.in.in	2012-02-29 06:15:15.000000000 +1100
++++ florence-0.6.0-patched/data/florence.desktop.in.in	2012-10-07 02:57:29.791902173 +1100
+@@ -1,10 +1,19 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+-_Name=Florence Virtual Keyboard
+-_Comment=Florence Virtual Keyboard
++Name=Florence
++Name[fr]=Florence
++Name[it]=Florence
++Name[ru]=Florence
++GenericName=Virtual Keyboard
++GenericName[fr]=Clavier virtuel
++GenericName[it]=TastieraVirtuale
++GenericName[ru]=Виртуальная Клавиатура
++Comment=Virtual Keyboard
++Comment[fr]=Clavier virtuel
++Comment[it]=TastieraVirtuale
++Comment[ru]=Виртуальная Клавиатура
+ Exec=florence
+ Terminal=false
+ Type=Application
+ Icon=@ICONDIR@/florence.svg
+-Categories=Application;Accessibility;
++Categories=Utility;Accessibility;
+ 
