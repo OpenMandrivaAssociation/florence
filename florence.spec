@@ -1,20 +1,22 @@
+%define	gstapi	0.10
+
+Summary:	Extensible scalable on-screen virtual keyboard
 Name:		florence
 Version:	0.6.0
 Release:	1
-Summary:	Extensible scalable on-screen virtual keyboard
-
 Group:		System/X11
 License:	GPLv2+ and GFDL
-URL:		http://florence.sourceforge.net
+Url:		http://florence.sourceforge.net
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.6.0-desktop.patch
+
 BuildRequires:	intltool
 BuildRequires:	rarian
 BuildRequires:	pkgconfig(atspi-2)
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(gmodule-2.0)
 BuildRequires:	pkgconfig(gnome-doc-utils)
-BuildRequires:	pkgconfig(gstreamer-0.10)
+BuildRequires:	pkgconfig(gstreamer-%{gstapi})
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(librsvg-2.0)
 BuildRequires:	pkgconfig(libxml-2.0)
@@ -67,17 +69,3 @@ reconfigure layouts in KDE4 settings once and it should work.
 %{_datadir}/pixmaps/%{name}.svg
 %{_mandir}/man1/%{name}*.1*
 
-%changelog
-* Mon Oct 10 2011 Andrey Bondrov <abondrov@mandriva.org> 0.5.1-1mdv2012.0
-+ Revision: 704092
-- New version 0.5.1
-- Update BuildRequires and rebuild
-
-* Sat Sep 10 2011 Andrey Bondrov <abondrov@mandriva.org> 0.5.0-1
-+ Revision: 699201
-- imported package florence
-
-
-* Sat Sep 10 2011 Andrey Bondrov <bondrov@math.dvgu.ru> 0.5.0-1mdv2011.0
-- Initial package for Mandriva
-- Add patch 1 to fix segfaults on some xkb events
