@@ -14,7 +14,7 @@ License:	GPLv2+ and GFDL
 Url:		http://florence.sourceforge.net
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.6.0-desktop.patch
-Patch1:		florence-0.6.2-linkage.patch
+#Patch1:		florence-0.6.2-linkage.patch
 Patch2:		florence-0.6.3-ld-no-undefined.patch
 BuildRequires:	intltool
 BuildRequires:	rarian
