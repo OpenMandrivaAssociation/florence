@@ -8,13 +8,14 @@
 Summary:	Extensible scalable on-screen virtual keyboard
 Name:		florence
 Version:	0.6.3
-Release:	2
+Release:	3
 Group:		System/X11
 License:	GPLv2+ and GFDL
 Url:		http://florence.sourceforge.net
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.6.0-desktop.patch
 Patch1:		florence-0.6.2-linkage.patch
+Patch2:		florence-0.6.3-ld-no-undefined.patch
 BuildRequires:	intltool
 BuildRequires:	rarian
 BuildRequires:	pkgconfig(atspi-2)
@@ -88,21 +89,19 @@ Development files for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%patch0 -p1
-%patch1 -p1
+%autosetup -p1
 
 %build
 autoreconf -fi
-%configure2_5x \
+%configure \
 	--without-panelapplet \
 	--without-xrecord \
 	--without-notification \
 	--disable-static
-make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %find_lang %{name} --with-gnome
 
