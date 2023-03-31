@@ -8,7 +8,7 @@
 Summary:	Extensible scalable on-screen virtual keyboard
 Name:		florence
 Version:	0.6.3
-Release:	3
+Release:	4
 Group:		System/X11
 License:	GPLv2+ and GFDL
 Url:		http://florence.sourceforge.net
