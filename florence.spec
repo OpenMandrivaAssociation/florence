@@ -11,7 +11,7 @@ Version:	0.6.3
 Release:	4
 Group:		System/X11
 License:	GPLv2+ and GFDL
-Url:		http://florence.sourceforge.net
+Url:		https://florence.sourceforge.net
 Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.6.0-desktop.patch
 #Patch1:		florence-0.6.2-linkage.patch
