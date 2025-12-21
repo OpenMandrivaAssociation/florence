@@ -16,6 +16,11 @@ Source0:	http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.bz2
 Patch0:		florence-0.6.0-desktop.patch
 #Patch1:		florence-0.6.2-linkage.patch
 Patch2:		florence-0.6.3-ld-no-undefined.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	intltool
 BuildRequires:	rarian
 BuildRequires:	pkgconfig(atspi-2)
