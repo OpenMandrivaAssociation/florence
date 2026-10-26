@@ -1,3 +1,8 @@
+# The LTO configure workaround rewrites this ancient libtool script into a
+# command that starts with -e, so the shared library is never produced.
+%global _disable_lto 1
+%global optflags %{optflags} -std=gnu17 -Wno-implicit-function-declaration -Wno-incompatible-function-pointer-types
+
 %define gstapi 1.0
 
 %define api 1.0
