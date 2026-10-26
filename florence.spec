@@ -108,10 +108,11 @@ autoreconf -fi
 	--without-xrecord \
 	--without-notification \
 	--disable-static
-%make_build
+# The generated libtool script returns without linking florence.
+%make_build LIBTOOL=slibtool-shared
 
 %install
-%make_install
+%make_install LIBTOOL=slibtool-shared
 
 %find_lang %{name} --with-gnome
 
